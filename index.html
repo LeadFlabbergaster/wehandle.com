@@ -10,6 +10,33 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-1 {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .animate-fade-in-2 {
+            animation: fadeInUp 0.6s ease-out 0.1s backwards;
+        }
+
+        .animate-fade-in-3 {
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+
+        .animate-fade-in-4 {
+            animation: fadeInUp 0.6s ease-out 0.3s backwards;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col" style="background-color: #FAFAFA;">
@@ -18,23 +45,23 @@
         <div class="max-w-lg mx-auto text-center">
             
             <!-- Domain Name -->
-            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4" style="color: #1D1D1F;">
+            <h1 class="animate-fade-in-1 text-4xl md:text-5xl font-semibold tracking-tight mb-4" style="color: #1D1D1F;">
                 wehandle.com
             </h1>
             
             <!-- Status -->
-            <p class="text-lg mb-8" style="color: #86868B;">
+            <p class="animate-fade-in-2 text-lg mb-8" style="color: #86868B;">
                 This domain is for sale
             </p>
             
             <!-- Price -->
-            <div class="mb-10 p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+            <div class="animate-fade-in-3 mb-10 p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
                 <p class="text-sm uppercase tracking-wide mb-2" style="color: #86868B;">Asking price</p>
                 <p class="text-3xl md:text-4xl font-semibold" style="color: #1D1D1F;">€49.500</p>
             </div>
 
             <!-- Form -->
-            <div class="p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+            <div class="animate-fade-in-4 p-6 rounded-2xl" style="background-color: #FFFFFF; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
                 <p class="text-sm uppercase tracking-wide mb-4" style="color: #86868B;">Interested? Get in touch</p>
                 
                 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -76,8 +103,8 @@
                         ></textarea>
                         <button
                             type="submit"
-                            class="w-full px-6 py-3 font-semibold rounded-xl transition-all hover:opacity-90"
-                            style="background-color: #5C9AFB; color: #FFFFFF;"
+                            class="w-full px-6 py-3 font-semibold rounded-xl transition-all hover:opacity-90 hover:-translate-y-0.5"
+                            style="background-color: #5C9AFB; color: #FFFFFF; box-shadow: 0 4px 16px rgba(92, 154, 251, 0.25);"
                         >
                             Submit
                         </button>
